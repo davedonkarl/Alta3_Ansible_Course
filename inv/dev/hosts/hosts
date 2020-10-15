@@ -19,6 +19,20 @@ ansible_become_method=enable
 ansible_user=admin
 ansible_ssh_pass=alta3
 
+[aristaswitchessecure]
+; description of our arista inventory
+sw-01         ansible_host=sw-01
+sw-02         ansible_host=sw-02
+    
+[aristaswitchessecure:vars]
+; variables specific to arista switches
+ansible_network_os=eos
+ansible_connection=network_cli
+ansible_become=yes
+ansible_become_method=enable
+ansible_user=admin
+ansible_ssh_pass=alta3
+
 [ciscoswitches]
 ; description of our cisco ~/mycode/inventory
 cisco1      ansible_host=192.168.0.1

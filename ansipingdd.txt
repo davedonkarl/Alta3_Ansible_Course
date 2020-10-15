@@ -1,0 +1,41 @@
+zoidberg | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '10.10.2.5' (ECDSA) to the list of known hosts.\r\nzoidberg@10.10.2.5: Permission denied (publickey,password).",
+    "unreachable": true
+}
+fry | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+bender | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+sw-01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+cisco1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+sw-02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+cisco2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "ping": "pong"
+}
