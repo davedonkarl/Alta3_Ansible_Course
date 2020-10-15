@@ -1,0 +1,28 @@
+---
+  - name: Arista Config Saver
+    hosts: arista_switches
+    gather_facts: false
+    
+    # some vars settings are CRITICAL when working with switches
+    vars:
+      ansible_connection: network_cli   # set this when working with most switches with SSH access
+      ansible_become: yes # tells ansible to run enable
+      ansible_become_method: enable
+      ansible_ssh_pass: alta3   # needs secured! This is a job for Ansible Vault (encryption tool)
+
+    tasks:
+    - name: Arista Fact Collection
+      eos_facts:
+        gather_subset: all  # IMPORTANT! Look at the return values at the bottom of the eos_facts
+    
+    - name: Create Arista config save directory
+      file: path=arista_config/ state=directory # Playbook will FAIL without this directory
+    
+    - name: Arista Config Save        
+      shell: "echo '{{ ansible_net_config }}' > arista_config/{{ ansible_net_hostname }}"
+    
+    - name: Arista Archival Process
+      archive:
+        path: arista_config/{{ ansible_net_hostname }}  # Location of our archived file
+        remove: True     # Removes the original file
+

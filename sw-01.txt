@@ -1,0 +1,47 @@
+{
+    "discovered_interpreter_python": "/usr/bin/python",
+    "net_all_ipv4_addresses": [
+        "10.17.133.142"
+    ],
+    "net_all_ipv6_addresses": [],
+    "net_api": "cliconf",
+    "net_filesystems": [
+        "file:",
+        "flash:",
+        "system:"
+    ],
+    "net_fqdn": "napya-4585-sw-01",
+    "net_gather_network_resources": [],
+    "net_gather_subset": [
+        "hardware",
+        "default",
+        "interfaces"
+    ],
+    "net_hostname": "napya-4585-sw-01",
+    "net_image": "flash:/vEOS-lab.swi",
+    "net_interfaces": {
+        "Management1": {
+            "bandwidth": 1000000000,
+            "description": "",
+            "duplex": "duplexFull",
+            "ipv4": {
+                "address": "10.17.133.142",
+                "masklen": 16
+            },
+            "lineprotocol": "up",
+            "macaddress": "aa:a3:a3:b5:9d:0a",
+            "mtu": 1500,
+            "operstatus": "connected",
+            "type": "routed"
+        }
+    },
+    "net_memfree_mb": 1305.5234375,
+    "net_memtotal_mb": 1967.37109375,
+    "net_model": "vEOS",
+    "net_neighbors": {},
+    "net_python_version": "2.7.17",
+    "net_serialnum": "",
+    "net_system": "eos",
+    "net_version": "4.22.0F",
+    "network_resources": {}
+}
